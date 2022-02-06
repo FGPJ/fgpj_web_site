@@ -1,24 +1,49 @@
-# README
+# fgpj_wed_site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 開発環境
 
-Things you may want to cover:
+Rails version: 6.1.4.4  
+Ruby version: ruby 2.6.9p207 (2021-11-24 revision 67954) [x86_64-linux]  
+Mysql 8.0  
+Docker  
 
-* Ruby version
+## 環境構築
 
-* System dependencies
+1.Dockerの公式サイトからDockerをインストールしてください  
+https://www.docker.com/
 
-* Configuration
+2.このプロジェクトからdevelopブランチをクローンしてください  
 
-* Database creation
+3.クローンしたプロジェクトフォルダ  ```/fgpj_wed_site```直下に以下の内容のファイルを作成する
 
-* Database initialization
+.env  
+```bash
+DB_USERNAME="root"
+DB_PASSWORD="password"
+```
+以降何か詰まったら追記すること　　
 
-* How to run the test suite
+## ブランチ運用について
 
-* Services (job queues, cache servers, search engines, etc.)
+#### main 本番環境　　　
+基本developからしかマージできない　　　
 
-* Deployment instructions
+#### develop　　開発環境　　
+masterへマージするためのブランチ機能追加や改修を行うときはこのブランチから切っていく  
+機能改修したものに関してはこのブランチにマージする
 
-* ...
+* 新たブランチを切る時ときは目的に沿った名前でブランチを切ること  
+
+release 次にリリースするものを置くブランチ	
+(例)release/brunch_name
+
+feature　新機能開発中に使うブランチ
+feature/brunch_name
+
+hotfix　公開中のもののバグ修正用ブランチ	
+hotfix/brunch_name
+
+## 参考サイト
+
+【Rails】Rails 6.0 x Docker x MySQLで環境構築（MACOS）  
+https://qiita.com/nsy_13/items/9fbc929f173984c30b5d
