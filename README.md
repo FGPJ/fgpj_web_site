@@ -28,20 +28,20 @@ DB_PASSWORD="password"
 #### main 本番環境　　　
 基本developからしかマージできない　　　
 
-#### develop　　開発環境　　
+#### develop 開発環境　　
 masterへマージするためのブランチ機能追加や改修を行うときはこのブランチから切っていく  
 機能改修したものに関してはこのブランチにマージする
 
-* 新たブランチを切る時ときは目的に沿った名前でブランチを切ること  
+##### 新たブランチを切る時ときは目的に沿った名前でブランチを切ること  
 
-release 次にリリースするものを置くブランチ	
-(例)release/brunch_name
+* release 次にリリースするものを置くブランチ  
+(例)release/brunch_name  
 
-feature　新機能開発中に使うブランチ
-feature/brunch_name
+* feature　新機能開発中に使うブランチ  
+(例)feature/brunch_name  
 
-hotfix　公開中のもののバグ修正用ブランチ	
-hotfix/brunch_name
+* hotfix　公開中のもののバグ修正用ブランチ  
+(例)hotfix/brunch_name  
 
 ## 参考サイト
 
