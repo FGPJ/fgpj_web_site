@@ -48,5 +48,5 @@ masterへマージするためのブランチ機能追加や改修を行うと�
 【Rails】Rails 6.0 x Docker x MySQLで環境構築（MACOS）  
 https://qiita.com/nsy_13/items/9fbc929f173984c30b5d
 
-Rails×React×TypeScriptで作るWEBアプリ入門
+Rails×React×TypeScriptで作るWEBアプリ入門  
 https://weseek.co.jp/tech/837/
