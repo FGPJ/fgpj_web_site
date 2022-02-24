@@ -1,0 +1,24 @@
+
+<header class="header">
+	<div class="header__container w-container">
+		<div class="header__left">
+      <%= link_to image_tag("logo.jpg", class:"header__logo", :alt => 'logo'), "/" %>
+		</div>
+
+		<button class="header__navbtn" onClick="document.querySelector('html').classList.toggle('open')">
+			<i class="fas fa-bars"></i>
+			<i class="fas fa-times"></i>
+			<span class="sr-only">MENU</span>
+		</button>
+
+		<nav class="header__nav">
+	    <ul>
+				<li><%= link_to "ホーム画面", "/", class: "header__nav--nav-link" %></li>
+				<li><%= link_to "FGPJの概要", "/", class: "header__nav--nav-link" %></li>
+				<li><%= link_to "お知らせ", "/", class: "header__nav--nav-link"%></li>
+        <li><%= link_to "成果物", "/", class: "header__nav--nav-link" %></li>
+        <li><%= link_to "参加希望の方へ", "/", class: "header__nav--nav-link" %></li>
+			</ul>
+		</nav>
+	</div>
+</header>
