@@ -1,0 +1,46 @@
+@import "config/breakpoint";
+@import "mixin/mixin";
+
+.w-container {
+  width: unquote("min(92%, 1166px)");
+  margin: auto;
+}
+
+/* 横幅と左右の余白 */
+.w-container {
+  width: quote("min(92%, 1166px)");
+  margin: auto;
+  position: relative;
+}
+
+/* フッター */
+.footer {
+  padding: 20px 0;
+  background-color: #ffffff;
+  color: #707070;
+  font-size: 13px;
+  &__container {
+    display: grid;
+    justify-items: center;
+    place-items: center;
+    font-size: 24px;
+  }
+  &__copy {
+    margin-top: 20px;
+  }
+}
+
+@include mq-up(md) {
+  .footer__container {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .footer__site {
+    justify-self: start;
+  }
+
+  .footer__copy {
+    justify-self: end;
+  }
+}
