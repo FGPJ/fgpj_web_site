@@ -1,0 +1,117 @@
+@import "config/breakpoint";
+@import "mixin/mixin";
+
+.w-container {
+  width: unquote("min(92%, 1166px)");
+  margin: auto;
+}
+
+/* 横幅と左右の余白 */
+.w-container {
+  width: quote("min(92%, 1166px)");
+  margin: auto;
+  position: relative;
+}
+
+/* ヘッダー */
+.header {
+  height: 112px;
+  background-color: #ffffff;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  &__logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* ナビゲーションボタン */
+  &__navbtn {
+    padding: 0;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #aaaaaa;
+    font-size: 30px;
+  }
+  &__nav {
+    &--nav-link {
+      text-decoration: none;
+    }
+  }
+}
+
+.open .header__navbtn {
+  z-index: 110;
+  color: #ffffff;
+}
+
+.header__navbtn .fa-bars {
+  display: revert;
+}
+
+.open .header__navbtn .fa-bars {
+  display: none;
+}
+
+.header__navbtn .fa-times {
+  display: none;
+}
+
+.open .header__navbtn .fa-times {
+  display: revert;
+}
+
+@include mq-up(md) {
+  .header__navbtn {
+    display: none;
+  }
+}
+
+/* ナビゲーションメニュー：モバイル */
+@include mq-down(md) {
+  .open .header__nav {
+    transform: translate(-100%, 0);
+  }
+  .header__nav {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    z-index: 100;
+    background-color: #4e483ae6;
+    transition: transform 0.3s;
+    & ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      gap: 40px;
+      color: #ffffff;
+    }
+    &--nav-link {
+      color: #ffffff;
+    }
+  }
+}
+
+/* ナビゲーションメニュー：PC */
+@include mq-up(md) {
+  .header__nav {
+    & ul {
+      display: flex;
+      gap: 40px;
+      color: #707070;
+    }
+  }
+}
+
+@include mq-down(md) {
+  .open body {
+    position: fixed;
+    overflow: hidden;
+  }
+}
